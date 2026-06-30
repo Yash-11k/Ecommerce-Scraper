@@ -85,6 +85,17 @@ http://127.0.0.1:5000
 - Product Table
 - Price Visualization
 
+## Future Improvements Can be
+
+- Add pagination
+- Add price filter
+- Deploy on Render
+
+
+
+
+
+
 ## 👨‍💻 Author
 
 Yash Kagra
