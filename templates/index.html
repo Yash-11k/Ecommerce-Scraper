@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Ecommerce Scraper</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        table{
+
+            border-collapse:collapse;
+            width:100%;
+
+        }
+
+        th,td{
+
+            border:1px solid black;
+            padding:8px;
+
+        }
+
+        th{
+
+            background:#ddd;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Product Search</h1>
+
+<form method="POST">
+
+<input
+type="text"
+name="search"
+placeholder="Search Product">
+
+<button>
+
+Search
+
+</button>
+
+</form>
+
+<br>
+
+<table>
+
+<tr>
+
+<th>Title</th>
+
+<th>Price</th>
+
+<th>Rating</th>
+
+<th>Link</th>
+
+</tr>
+
+{% for product in products %}
+
+<tr>
+
+<td>{{product.Title}}</td>
+
+<td>{{product.Price}}</td>
+
+<td>{{product.Rating}}</td>
+
+<td>
+
+<a href="{{product.Link}}">
+
+Open
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<h2>Price Chart</h2>
+
+<img src="{{ url_for('static', filename='chart.png') }}" width="800">
+
+</body>
+
+</html>
